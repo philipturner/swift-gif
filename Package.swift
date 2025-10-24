@@ -18,7 +18,6 @@ let package = Package(
         .package(url: "https://github.com/apple/swift-docc-plugin.git", from: "1.1.0"),
         .package(url: "https://github.com/apple/swift-log.git", from: "1.4.0"),
         .package(url: "https://github.com/fwcd/swift-utils.git", from: "4.0.0"),
-        .package(url: "https://github.com/fwcd/swift-graphics.git", from: "4.0.0"),
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
@@ -28,7 +27,6 @@ let package = Package(
             dependencies: [
                 .product(name: "Logging", package: "swift-log"),
                 .product(name: "Utils", package: "swift-utils"),
-                .product(name: "CairoGraphics", package: "swift-graphics")
             ]
         ),
         .testTarget(
