@@ -1,6 +1,5 @@
 import Foundation
 import Logging
-import Utils
 
 fileprivate let log = Logger(label: "GIF.GIFEncoder")
 

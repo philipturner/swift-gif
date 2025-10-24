@@ -1,5 +1,4 @@
 // Based on http://giflib.sourceforge.net/whatsinagif/lzw_image_data.html
-import Utils
 import Logging
 
 fileprivate let log = Logger(label: "GIF.LzwDecoderTable")

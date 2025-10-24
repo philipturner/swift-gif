@@ -2,7 +2,6 @@ import Foundation
 import Logging
 import GIF
 import CairoGraphics // requires swift-graphics dependency
-import Utils
 
 LoggingSystem.bootstrap {
     GIFLogHandler(label: $0)
