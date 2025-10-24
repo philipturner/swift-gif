@@ -1,5 +1,3 @@
-import CairoGraphics
-
 /// An in-memory, decoded GIF animation, closely
 /// mirroring the internal structure of a GIF.
 public struct GIF {

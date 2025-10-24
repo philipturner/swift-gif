@@ -1,5 +1,3 @@
-import CairoGraphics
-
 public struct Frame {
     public let image: CairoImage
     public let imageDescriptor: ImageDescriptor

@@ -1,6 +1,5 @@
 import XCTest
 import Logging
-import CairoGraphics
 @testable import GIF
 
 fileprivate let log = Logger(label: "GIFTests.GIFCoderTests")

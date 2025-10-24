@@ -1,5 +1,4 @@
 import Foundation
-import CairoGraphics
 
 /// Color channels, assuming RGB colors.
 fileprivate let CHANNELS = 3

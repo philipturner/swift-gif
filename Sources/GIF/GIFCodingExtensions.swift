@@ -1,5 +1,4 @@
 import Foundation
-import CairoGraphics
 
 /// Some high-level extensions that expose encoding
 /// and decoding operations.

@@ -1,5 +1,3 @@
-import CairoGraphics
-
 /// A finite color palette generated from an image.
 public protocol ColorQuantization {
     /// The color table associated with this quantization.
