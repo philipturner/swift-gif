@@ -11,6 +11,15 @@ public class CairoImage {
     }
     
     public subscript(_ y: Int, _ x: Int) -> Color {
-        
+        get {
+            let address = y * width + x
+            let rawValue = pixels[address]
+            return Color(rgb: rawValue)
+        }
+        set {
+            let address = y * width + x
+            let rawValue = newValue.rgb
+            pixels[address] = rawValue
+        }
     }
 }
