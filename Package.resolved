@@ -1,5 +1,5 @@
 {
-  "originHash" : "c07b91a22fc5583975a4e106bcdc375ef433999634b05c742bbac7f120caad96",
+  "originHash" : "c495a5371ef28d8e0528772c94cbed3d5d8e30b90f9fd1c47acac24a3592b203",
   "pins" : [
     {
       "identity" : "swift-docc-plugin",
@@ -26,33 +26,6 @@
       "state" : {
         "revision" : "e97a6fcb1ab07462881ac165fdbb37f067e205d5",
         "version" : "1.5.4"
-      }
-    },
-    {
-      "identity" : "swift-utils",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/fwcd/swift-utils.git",
-      "state" : {
-        "revision" : "12e4cb20ae4c4d4339c670bbf4ab72e8c3981fcc",
-        "version" : "4.0.0"
-      }
-    },
-    {
-      "identity" : "swiftsoup",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/scinfu/SwiftSoup.git",
-      "state" : {
-        "revision" : "f83c097597094a04124eb6e0d1e894d24129af87",
-        "version" : "2.7.0"
-      }
-    },
-    {
-      "identity" : "xmlcoder",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/MaxDesiatov/XMLCoder.git",
-      "state" : {
-        "revision" : "b1e944cbd0ef33787b13f639a5418d55b3bed501",
-        "version" : "0.17.1"
       }
     }
   ],
