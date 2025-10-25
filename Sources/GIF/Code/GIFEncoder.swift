@@ -215,7 +215,7 @@ struct GIFEncoder {
     }
 
     private mutating func appendImageDataAsLZW(
-        image: CairoImage,
+        image: BufferedImage,
         quantization: ColorQuantization,
         width: Int,
         height: Int,

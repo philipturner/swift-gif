@@ -22,6 +22,8 @@ for i in 0..<5 {
 
     ctx.draw(rect: Rectangle(fromX: Double(i) * 20, y: Double(i) * 20, width: 10, height: 10, color: .blue, isFilled: true))
 
+    // Old code from before we removed the swift-graphics dependency. The code
+    // will no longer work without modifications.
     let image = try ctx.makeImage()
     gif.frames.append(.init(image: image, delayTime: 100))
 }

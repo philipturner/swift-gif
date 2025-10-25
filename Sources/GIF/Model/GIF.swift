@@ -65,7 +65,7 @@ public struct GIF {
         )
     }
 
-    public init(quantizingImage image: CairoImage) {
+    public init(quantizingImage image: BufferedImage) {
         self.init(
             width: image.width,
             height: image.height,

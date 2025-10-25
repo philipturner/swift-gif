@@ -25,8 +25,38 @@ final class GIFCoderTests: XCTestCase {
             }
         }
     }
+    
+    // Make sure the snippet on the README works without crashing. This
+    // adds ~0.8 seconds to the test suite's execution time, on a system where
+    // it was taking ~14.0 seconds before.
+    func testSnippet() throws {
+        // Create a new GIF
+        var gif = GIF(width: 300, height: 300)
+        
+        // Add some frames for the animation
+        for i in 0..<20 {
+            var image = BufferedImage(width: 300, height: 300)
+            for y in 0..<300 {
+                for x in 0..<300 {
+                    // Generate pixel data
+                    let color = Color(
+                        red: UInt8(x % 256),
+                        green: UInt8(x % 256),
+                        blue: UInt8((i * 20) % 256))
+                    image[y, x] = color
+                }
+            }
+            gif.frames.append(.init(image: image, delayTime: 100))
+        }
+        
+        // Encode the GIF to a byte buffer
+        let data = try gif.encoded()
+        
+        // Suppress warnings about otherwise valid code in the snippet.
+        _ = data
+    }
 
-    private func assertImagesEqual(_ image1: CairoImage, _ image2: CairoImage) {
+    private func assertImagesEqual(_ image1: BufferedImage, _ image2: BufferedImage) {
         XCTAssertEqual(image1.width, image2.width)
         XCTAssertEqual(image1.height, image2.height)
 

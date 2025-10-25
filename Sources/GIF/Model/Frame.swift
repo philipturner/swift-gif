@@ -1,5 +1,5 @@
 public struct Frame {
-    public let image: CairoImage
+    public let image: BufferedImage
     public let imageDescriptor: ImageDescriptor
     public let graphicsControlExtension: GraphicsControlExtension?
     public internal(set) var localQuantization: ColorQuantization?
@@ -9,7 +9,7 @@ public struct Frame {
 
     /// High-level initializer
     public init(
-        image: CairoImage,
+        image: BufferedImage,
         delayTime: Int = 0,
         localQuantization: ColorQuantization? = nil,
         disposalMethod: DisposalMethod = .clearCanvas
@@ -39,7 +39,7 @@ public struct Frame {
 
     /// Low-level initializer
     init(
-        image: CairoImage,
+        image: BufferedImage,
         imageDescriptor: ImageDescriptor,
         graphicsControlExtension: GraphicsControlExtension?,
         localQuantization: ColorQuantization?

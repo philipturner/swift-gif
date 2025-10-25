@@ -7,7 +7,7 @@ public protocol ColorQuantization {
 
     /// Applies the associated quantization algorithm
     /// to create a quantized version of the given image.
-    init(fromImage image: CairoImage, colorCount: Int)
+    init(fromImage image: BufferedImage, colorCount: Int)
 
     /// Quantizes a given color, returning a code in
     /// the color table.

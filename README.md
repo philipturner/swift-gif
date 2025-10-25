@@ -13,10 +13,17 @@ var gif = GIF(width: 300, height: 300)
 
 // Add some frames for the animation
 for i in 0..<20 {
-    // TODO: Update this snipped now that the swift-graphics dependency was
-    // removed. We no longer rely on this dependency, which includes PNG
-    // deserialization functionality.
-    let image = try CairoImage(pngFilePath: "frame\(i).png")
+    var image = BufferedImage(width: 300, height: 300)
+    for y in 0..<300 {
+        for x in 0..<300 {
+            // Generate pixel data
+            let color = Color(
+                red: UInt8(x % 256),
+                green: UInt8(x % 256),
+                blue: UInt8((i * 20) % 256))
+            image[y, x] = color
+        }
+    }
     gif.frames.append(.init(image: image, delayTime: 100))
 }
 
@@ -31,4 +38,3 @@ GIF encoding is more computationally intensive than decoding. It can become a bo
 ## System Dependencies
 
 * Swift 5.10+
-* Cairo, see [swift-graphics](https://github.com/fwcd/swift-graphics)
