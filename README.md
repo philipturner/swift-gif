@@ -13,6 +13,9 @@ var gif = GIF(width: 300, height: 300)
 
 // Add some frames for the animation
 for i in 0..<20 {
+    // TODO: Update this snipped now that the swift-graphics dependency was
+    // removed. We no longer rely on this dependency, which includes PNG
+    // deserialization functionality.
     let image = try CairoImage(pngFilePath: "frame\(i).png")
     gif.frames.append(.init(image: image, delayTime: 100))
 }
