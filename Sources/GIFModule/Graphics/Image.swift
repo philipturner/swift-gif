@@ -13,11 +13,11 @@ public struct Image {
         get {
             let address = y * width + x
             let rawValue = pixels[address]
-            return Color(rgb: rawValue)
+            return Color(argb: rawValue)
         }
         set {
             let address = y * width + x
-            let rawValue = newValue.rgb
+            let rawValue = newValue.argb
             pixels[address] = rawValue
         }
     }
