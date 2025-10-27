@@ -13,7 +13,7 @@ var gif = GIF(width: 300, height: 300)
 
 // Add some frames for the animation
 for i in 0..<20 {
-    var image = BufferedImage(width: 300, height: 300)
+    var image = Image(width: 300, height: 300)
     for y in 0..<300 {
         for x in 0..<300 {
             // Generate pixel data

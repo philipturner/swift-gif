@@ -1,5 +1,5 @@
 import XCTest
-@testable import GIF
+@testable import GIFModule
 
 final class LzwCoderTests: XCTestCase {
     // Using the sample image from

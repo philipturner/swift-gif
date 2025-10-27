@@ -1,6 +1,6 @@
 import Foundation
 import Logging
-import GIF
+import GIFModule
 import CairoGraphics // requires swift-graphics dependency
 
 LoggingSystem.bootstrap {

@@ -1,6 +1,6 @@
 import XCTest
 import Logging
-@testable import GIF
+@testable import GIFModule
 
 fileprivate let log = Logger(label: "GIFTests.GIFCoderTests")
 
@@ -35,7 +35,7 @@ final class GIFCoderTests: XCTestCase {
         
         // Add some frames for the animation
         for i in 0..<20 {
-            var image = BufferedImage(width: 300, height: 300)
+            var image = Image(width: 300, height: 300)
             for y in 0..<300 {
                 for x in 0..<300 {
                     // Generate pixel data
@@ -56,7 +56,7 @@ final class GIFCoderTests: XCTestCase {
         _ = data
     }
 
-    private func assertImagesEqual(_ image1: BufferedImage, _ image2: BufferedImage) {
+    private func assertImagesEqual(_ image1: Image, _ image2: Image) {
         XCTAssertEqual(image1.width, image2.width)
         XCTAssertEqual(image1.height, image2.height)
 

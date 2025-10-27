@@ -1,11 +1,4 @@
-// Chose BufferedImage instead of Image because the latter is too generic and
-// likely to cause name conflicts. Resolving them with the library prefix
-// ('GIF.Image' vs 'OtherLibrary.Image') creates more confusion because now
-// Image could be a sub-type of the 'GIF' data type. A solution to that would
-// be renaming this entire package to 'GIFModule'.
-
-/// An image with an internal backing buffer.
-public struct BufferedImage {
+public struct Image {
     public let width: Int
     public let height: Int
     private var pixels: [UInt32]

@@ -1,6 +1,6 @@
 import Foundation
 import Logging
-import GIF
+import GIFModule
 
 LoggingSystem.bootstrap {
     GIFLogHandler(label: $0)

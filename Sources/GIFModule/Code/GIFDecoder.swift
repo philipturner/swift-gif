@@ -259,7 +259,7 @@ struct GIFDecoder {
         height: Int,
         sizeOfColorTable: UInt8,
         backgroundColorIndex: UInt8
-    ) throws -> BufferedImage {
+    ) throws -> Image {
         log.debug("Reading image data...")
 
         // Read beginning of image block
@@ -279,7 +279,7 @@ struct GIFDecoder {
 
         // Decode the color indices to actual (A)RGB colors and write them into an image
         let colorTable = quantization.colorTable
-        var image = BufferedImage(width: width, height: height)
+        var image = Image(width: width, height: height)
 
         assert(decoded.count >= width * height)
         log.debug("Decoded image data \(decoded.prefix(10).map(UInt8.init).hexString)...")

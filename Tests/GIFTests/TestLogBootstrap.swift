@@ -1,5 +1,5 @@
 import Logging
-import GIF
+import GIFModule
 
 // See https://github.com/apple/swift-log/issues/77
 //
@@ -7,8 +7,8 @@ import GIF
 // (and handler) for logging in unit tests.
 
 let isLoggingConfigured: Bool = {
-    LoggingSystem.bootstrap {
-        GIFLogHandler(label: $0)
-    }
+//    LoggingSystem.bootstrap {
+//        GIFLogHandler(label: $0)
+//    }
     return true
 }()
